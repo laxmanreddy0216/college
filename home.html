@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<title>SBIT</title>
+<script type="text/javascript">
+function Warn()
+{
+	alert(" Message Sent Succesfully");
+	document.Write("Message Sent")
+}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<link rel="stylesheet" href="css/w3.css">
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">-->
+<link rel="stylesheet" href="css/gw3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="css/faw3.css">-->
+
+<style>
+blink {
+    -webkit-animation: 1.5s linear infinite condemned_blink_effect; // for android
+    animation: 1.5s linear infinite condemned_blink_effect;
+}
+@-webkit-keyframes condemned_blink_effect { // for android
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@keyframes condemned_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 5px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black" >
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="http://localhost/college/home.html"> <img src="logo.png" style="width:100%" >
+  <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="mainfaclogin.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Faculty</p>
+  </a>
+
+  <a href="slogin.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-users w3-xxlarge"></i>
+    <p>Student</p>
+  </a>
+  <a href="nboard.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-pencil-square-o w3-xxlarge"></i>
+    <p>Notice Board</p>
+  </a>
+
+  <a href="https://www.google.co.in/maps/place/Swarna+Bharathi+Institute+of+Science+and+Technology/@17.2323702,80.1605549,17z/data=!3m1!4b1!4m5!3m4!1s0x3a345760d4485731:0xbd6efd5c0b30441!8m2!3d17.2323702!4d80.1627436?hl=en" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-map-marker w3-xxlarge"></i>
+    <p>Locate</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="home.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="slogin.html" class="w3-bar-item w3-button" style="width:25% !important">STUDENT</a>
+    <a href="mainfaclogin.html" class="w3-bar-item w3-button" style="width:25% !important">FACULTY</a>
+    <a href="http://www.sbit.ac.in/contact_us_sbit.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"><img src="main.jpg" alt="boy" class="w3-image" height="250px" width="1150" ></img></span> </h1>
+   <p><u><marquee>Welcome to Swarna Bharathi Institue of Science and Technology</marquee></u></p>
+   <div class="w3-content w3-section" style="max-width:750px">
+  <img class="mySlides" src="1.png" style="width:100%">
+  <img class="mySlides" src="2.png" style="width:100%">
+  <img class="mySlides" src="3.png" style="width:100%">
+  <img class="mySlides" src="4.png" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "inline";
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+  </header>
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey"><blink>Vision</blink></h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>To develop the Departments of the Institute into full-fledged centers of learning in various fields of Engineering through innovative pedagogical approaches, by incorporating cutting-edge technologies, making the institution, unique of its kind.
+
+To foster conscience, proficiency and competency among the students in pursuit of excellence in all disciplines of Engineering.
+
+To develop a sense of dignity and commitment among the students in order to attain complete personality and intellectual growth coupled with confidence building.
+    </p>
+	<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey"><blink>Mission</blink></h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>To disseminate holistic education among the students of the Departments through scholarly mentoring and integrated pedagogy for individual and professional excellence.
+
+To continuously improve teaching and learning processes for making a successful career either in industry or higher education in India or abroad.
+
+To diligently train the students to contribute to the technological growth of the nation through their research & innovative skills with a commitment to address the societal needs and to be globally employable professionals.    </p>
+
+	<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey"><blink>Why Join us?</blink></h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Skim through the points below and you will understand that these are the characteristics of an ideal institution.
+
+  Exceptionally Qualified, Well-trained, Dedicated, Responsive and Experienced Professional Management.<br>
+=>  Teachers, obsessed with teaching & yet friendly with students.<br>
+=>  Access to innovative modern technology through world-class infrastructure.<br>
+=>  Good track record of previous batch results & placements.<br>
+=>  Making the students responsible citizens by instilling ethical values & creating a sense of personal responsibility towards the society.<br>
+=>  MOUs with National & International companies to open the gates of new avenues for the students.<br>
+=>  Making the transition from campus corridors to corporate world easy and hassle-free.<br>
+=>  The targeted goals of Management & Faculty for a rewarding career and evershining glory of success.<br>
+
+
+=>  This is simply what we offer at SBIT and this is how we ensure that SBIT remains as a premium choice to the students aspiring for promising careers.
+    </p>
+	<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey"><blink>Quality Policy</blink></h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p> We are committed towards developing and advancing the college as an institution of higher learning by offering quality education through excellent infrastructure, quality teaching-learning process and congenial ambience. The innate talents of students are nurtured through overall development by providing a number of curricular, co-curricular and extracurricular activities. We are also committed to implementing effective and transparent appraisal system. A good exposure to the students is offered through enhanced industry institution interaction (III), MOUs, expert lecturers, entrepreneurship, research and consultancy. The college provides conducive work environment to the faculty and staff by offering best facilities as per the AICTE/UGC guidelines for knowledge update, qualification improvement, etc.
+    </p>
+
+    <h3 class="w3-padding-16 w3-text-light-grey">Vacancies</h3>
+    <p class="w3-wide">Computer Science Engineering(CSE)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:50%"></div>
+    </div>
+    <p class="w3-wide">Electronics & Communication engineering(ECE)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+	 <p class="w3-wide">Electrical & Electronics Engineering(EEE)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+	 <p class="w3-wide">Civil Engineering(CE)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+	 <p class="w3-wide">Mechanical Engineering(ME)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Masters of Bussiness Administration(MBA)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:20%"></div>
+    </div><br>
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">250+</span><br>
+        Faculty
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">500+</span><br>
+        Placements
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Rewards
+      </div>
+    </div>
+
+    <a href="campuspic.html"><button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-eye"></i> View Campus InfraStructure
+    </button></a>
+		<a href="nboard.html"><button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-eye" formaction="nboard.html"></i> View notice board
+    </button></a>
+		<button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-eye"></i> View College faculty
+    </button>
+
+
+
+
+    <h3 class="w3-padding-24 w3-text-light-grey">Head  of the Institute</h3>
+    <img src="pnm.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Sri. Ponnam Venkateswarlu
+</span> </p><p>Treasurer, SBIT
+Khammam.</p>
+    <br><br>
+
+    <img src="rjc.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Sri G.Krishna</span> </p>
+    <p>Vice President, SBIT
+Khammam.</p><br>
+	<img src="pri.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Prof. P. Krishna Murthy </span>
+</p><p>Principal, SBIT ,Khammam.</p>
+    <br><br>
+	<img src="pre.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Prof S. Pullaiah </span> </p><p>PhD.
+Prof. of Chemical Engg. O.U. (Retd.),
+President, SBIT
+Khammam.</p>
+    <br>
+	<img src="pnm.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Ponnam.venkateswarlu</span> </p>
+    <br>
+
+  </div>
+
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">SBIT Gallery</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="1.png" style="width:100%">
+        <img src="2.png" style="width:100%">
+        <img src="3.png" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="4.png" style="width:100%">
+        <img src="logo.png" style="width:100%">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/p6.jpg" style="width:100%">
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact us</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> H.no.5-7-200/12, Pakabanda Street,Khammam-507002,Telangana</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +91-8712712331,
++91-8712112331.</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: sbitengg@gmail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send us a message:</p>
+
+    <form action="message.php" target="_blank" method="post">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" name="n"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" name="e"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" name="s"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" name="m"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" onclick="Warn();">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+
+  </div>
+
+
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Maintained by <a href="adminlogin.html" target="_blank" class="w3-hover-text-green">WEB-TEAM,CSE department</a></p>
+  </footer>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
